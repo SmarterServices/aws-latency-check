@@ -11,6 +11,12 @@ This check will run against the ```/ping``` endpoint for the AWS service endpoin
 * SQS
 * SimpleDB
 
+## Installation
+
+``` javascript
+npm install aws-latency-check --save
+```
+
 ## Methods
 
 ### constructor(regions [, options])
@@ -39,7 +45,7 @@ Fired after the entire check is completed.
 #### Sample Usage
 
 ``` javascript
-checker.on('complete', function (results) {
+checker.on('check_complete', function (results) {
     console.log(results);
 });
 ```
@@ -118,7 +124,7 @@ checker.on('error', function (err) {
 ## Example Usage
 ``` javascript
 // Require the library
-var LatencyCheck = require('LatencyCheck');
+var LatencyCheck = require('aws-latency-check');
 
 // Define the regions to check.
 var regions = {
