@@ -152,7 +152,7 @@ checker.on('check_complete', function (results) {
 
 // Listen for each region check to complete.
 checker.on('region_complete', function (progress, results) {
-    console.log('Current porogress': progress + '% complete');
+    console.log('Current porogress :'+ progress + '% complete');
     console.log(results);
 });
 
